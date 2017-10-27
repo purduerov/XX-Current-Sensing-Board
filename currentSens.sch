@@ -9,6 +9,20 @@
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
+<layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
+<layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
+<layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
+<layer number="5" name="Route5" color="4" fill="4" visible="no" active="no"/>
+<layer number="6" name="Route6" color="1" fill="8" visible="no" active="no"/>
+<layer number="7" name="Route7" color="4" fill="8" visible="no" active="no"/>
+<layer number="8" name="Route8" color="1" fill="2" visible="no" active="no"/>
+<layer number="9" name="Route9" color="4" fill="2" visible="no" active="no"/>
+<layer number="10" name="Route10" color="1" fill="7" visible="no" active="no"/>
+<layer number="11" name="Route11" color="4" fill="7" visible="no" active="no"/>
+<layer number="12" name="Route12" color="1" fill="5" visible="no" active="no"/>
+<layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
+<layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
+<layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="no" active="no"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="no" active="no"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="no" active="no"/>
@@ -4539,6 +4553,88 @@ Source: AVX .. aphvc.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="MCP3008">
+<packages>
+<package name="MCP3008">
+<smd name="VDD" x="-4.445" y="2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="VREF" x="-3.175" y="2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="AGND" x="-1.905" y="2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="CLK" x="-0.635" y="2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="DOUT" x="0.635" y="2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="DIN" x="1.905" y="2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="CS/SHDN" x="3.175" y="2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="DGND" x="4.445" y="2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="CH0" x="-4.445" y="-2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="CH1" x="-3.175" y="-2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="CH2" x="-1.905" y="-2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="CH3" x="-0.635" y="-2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="CH4" x="0.635" y="-2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="CH5" x="1.905" y="-2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="CH6" x="3.175" y="-2.7" dx="0.6" dy="1.5" layer="1"/>
+<smd name="CH7" x="4.445" y="-2.7" dx="0.6" dy="1.5" layer="1"/>
+<wire x1="-4.745" y1="1.65" x2="4.745" y2="1.65" width="0.127" layer="21"/>
+<wire x1="4.745" y1="1.65" x2="4.745" y2="-1.65" width="0.127" layer="21"/>
+<wire x1="4.745" y1="-1.65" x2="-4.745" y2="-1.65" width="0.127" layer="21"/>
+<wire x1="-4.745" y1="-1.65" x2="-4.745" y2="1.65" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MCP3008">
+<wire x1="-5.08" y1="7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="10.16" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-15.24" x2="-5.08" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-15.24" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<pin name="CH0" x="-10.16" y="5.08" length="middle"/>
+<pin name="CH1" x="-10.16" y="2.54" length="middle"/>
+<pin name="CH2" x="-10.16" y="0" length="middle"/>
+<pin name="CH3" x="-10.16" y="-2.54" length="middle"/>
+<pin name="CH4" x="-10.16" y="-5.08" length="middle"/>
+<pin name="CH5" x="-10.16" y="-7.62" length="middle"/>
+<pin name="CH6" x="-10.16" y="-10.16" length="middle"/>
+<pin name="CH7" x="-10.16" y="-12.7" length="middle"/>
+<pin name="VDD" x="15.24" y="5.08" length="middle" rot="R180"/>
+<pin name="VREF" x="15.24" y="2.54" length="middle" rot="R180"/>
+<pin name="AGND" x="15.24" y="0" length="middle" rot="R180"/>
+<pin name="CLK" x="15.24" y="-2.54" length="middle" rot="R180"/>
+<pin name="DOUT" x="15.24" y="-5.08" length="middle" rot="R180"/>
+<pin name="DIN" x="15.24" y="-7.62" length="middle" rot="R180"/>
+<pin name="CS/SHDN" x="15.24" y="-10.16" length="middle" rot="R180"/>
+<pin name="DGND" x="15.24" y="-12.7" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MCP3008">
+<gates>
+<gate name="G$1" symbol="MCP3008" x="-2.54" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="MCP3008">
+<connects>
+<connect gate="G$1" pin="AGND" pad="AGND"/>
+<connect gate="G$1" pin="CH0" pad="CH0"/>
+<connect gate="G$1" pin="CH1" pad="CH1"/>
+<connect gate="G$1" pin="CH2" pad="CH2"/>
+<connect gate="G$1" pin="CH3" pad="CH3"/>
+<connect gate="G$1" pin="CH4" pad="CH4"/>
+<connect gate="G$1" pin="CH5" pad="CH5"/>
+<connect gate="G$1" pin="CH6" pad="CH6"/>
+<connect gate="G$1" pin="CH7" pad="CH7"/>
+<connect gate="G$1" pin="CLK" pad="CLK"/>
+<connect gate="G$1" pin="CS/SHDN" pad="CS/SHDN"/>
+<connect gate="G$1" pin="DGND" pad="DGND"/>
+<connect gate="G$1" pin="DIN" pad="DIN"/>
+<connect gate="G$1" pin="DOUT" pad="DOUT"/>
+<connect gate="G$1" pin="VDD" pad="VDD"/>
+<connect gate="G$1" pin="VREF" pad="VREF"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4612,6 +4708,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="P+10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="U$1" library="MCP3008" deviceset="MCP3008" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4683,6 +4780,7 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="P+10" gate="1" x="114.3" y="274.32"/>
 <instance part="GND19" gate="1" x="114.3" y="256.54"/>
 <instance part="GND20" gate="1" x="104.14" y="261.62"/>
+<instance part="U$1" gate="G$1" x="53.34" y="101.6"/>
 </instances>
 <busses>
 </busses>
@@ -4996,6 +5094,114 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="LED10" gate="G$1" pin="DO"/>
 <wire x1="127" y1="248.92" x2="114.3" y2="248.92" width="0.1524" layer="91"/>
 <label x="121.92" y="248.92" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="CLK" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="CLK"/>
+<wire x1="68.58" y1="99.06" x2="78.74" y2="99.06" width="0.1524" layer="91"/>
+<label x="73.66" y="99.06" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="AGND"/>
+<wire x1="68.58" y1="101.6" x2="86.36" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="101.6" x2="86.36" y2="99.06" width="0.1524" layer="91"/>
+<pinref part="U$1" gate="G$1" pin="DGND"/>
+<wire x1="86.36" y1="99.06" x2="86.36" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="96.52" x2="86.36" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="93.98" x2="86.36" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="86.36" y1="88.9" x2="86.36" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="88.9" x2="86.36" y2="88.9" width="0.1524" layer="91"/>
+<junction x="86.36" y="88.9"/>
+<pinref part="U2" gate="U$1" pin="AGND"/>
+<wire x1="96.52" y1="99.06" x2="86.36" y2="99.06" width="0.1524" layer="91"/>
+<junction x="86.36" y="99.06"/>
+<pinref part="U2" gate="U$1" pin="GND@3"/>
+<wire x1="96.52" y1="96.52" x2="86.36" y2="96.52" width="0.1524" layer="91"/>
+<junction x="86.36" y="96.52"/>
+<pinref part="U2" gate="U$1" pin="GND@5"/>
+<wire x1="96.52" y1="93.98" x2="86.36" y2="93.98" width="0.1524" layer="91"/>
+<junction x="86.36" y="93.98"/>
+</segment>
+</net>
+<net name="VREF" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="VREF"/>
+<wire x1="68.58" y1="104.14" x2="78.74" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="VDD" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="VDD"/>
+<wire x1="68.58" y1="106.68" x2="78.74" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="CH0" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="CH0"/>
+<wire x1="43.18" y1="106.68" x2="35.56" y2="106.68" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="CH1" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="CH1"/>
+<wire x1="43.18" y1="104.14" x2="35.56" y2="104.14" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="CH2" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="CH2"/>
+<wire x1="43.18" y1="101.6" x2="35.56" y2="101.6" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="CH3" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="CH3"/>
+<wire x1="43.18" y1="99.06" x2="35.56" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="CH4" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="CH4"/>
+<wire x1="43.18" y1="96.52" x2="35.56" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="CH5" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="CH5"/>
+<wire x1="43.18" y1="93.98" x2="35.56" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="CH6" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="CH6"/>
+<wire x1="43.18" y1="91.44" x2="35.56" y2="91.44" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="CH7" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="CH7"/>
+<wire x1="43.18" y1="88.9" x2="35.56" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="DOUT" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="DOUT"/>
+<wire x1="68.58" y1="96.52" x2="78.74" y2="96.52" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="DIN" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="DIN"/>
+<wire x1="68.58" y1="93.98" x2="78.74" y2="93.98" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="CS/SHDN" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="CS/SHDN"/>
+<wire x1="68.58" y1="91.44" x2="78.74" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
